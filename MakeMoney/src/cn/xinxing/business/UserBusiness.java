@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.xinxing.model.News;
 import cn.xinxing.model.Users;
 
 public class UserBusiness {
