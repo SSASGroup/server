@@ -74,6 +74,12 @@ public class UserInq extends HttpServlet {
 			list.add(UserBusiness.getUserInfoById(id));
 			listObject.setItems(list);
 			listObject.setStatusObject(StatusHouse.COMMON_STATUS_OK);
+		} else if(type.equals("update")) {
+			String id = request.getParameter("user_id");
+			String money = request.getParameter("user_money");
+			UserBusiness.updateById(id, money);
+
+			listObject.setStatusObject(StatusHouse.COMMON_STATUS_OK);
 		} else {
 			System.out.println("Wrong" ); 
 			listObject.setStatusObject(StatusHouse.COMMON_STATUS_ERROR);

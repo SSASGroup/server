@@ -82,6 +82,22 @@ public class UserBusiness {
 		} // 
 		return user;
 	}
+	
+	
+	public static void updateById(String id, String money) {
+		String sql = null;
+		DBHelper db1 = null;
+		sql = "UPDATE `zhengxianqian`.`user` SET `user_money`="+money+" WHERE `user_id`="+id;
+		db1 = new DBHelper(sql);
+		try {
+			int row = db1.pst.executeUpdate();
+			db1.close();// 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // 
+		return;
+	}
 
 }
 

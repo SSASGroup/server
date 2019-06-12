@@ -21,4 +21,8 @@ public class UserServiceImpl implements UserService{
 	public Users getUserInfoById(String _id) {
 		return UserBusiness.getUserInfoById(_id);
 	}
+	
+	public void updateById(String id, String money) {
+		UserBusiness.updateById(id, money);
+	}
 }
